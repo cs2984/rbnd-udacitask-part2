@@ -7,10 +7,10 @@ module Listable
   
   def format_date(due, event = nil)
       if event == nil 
-          due ? due.strftime("%D") : "No due date"
+          due ? due.strftime("%c") : "No due date"
       else
-          dates = @start_date.strftime("%D") if @start_date
-          dates << " -- " + @end_date.strftime("%D") if @end_date
+          dates = @start_date.strftime("%c") if @start_date
+          dates << " -- " + @end_date.strftime("%c") if @end_date
           dates = "N/A" if !dates
           return dates
       end
