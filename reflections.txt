@@ -1,13 +1,20 @@
 # What you added to Udacitask 2.0
 # -------------------------------------------------------
 1. What is the gem of your choice and how did you use it?
+I chose to incorporate the terminal table gem into my project in order to make the output of my program look better. 
 2. Describe the 2 features you added to the project.
   a) Feature 1...
+	This was the integration of Terminal-Table Gem which made the output of my lists look better using more ASCII characters to make the list easier to read. 
   b) Feature 2...
+	I allowed the user to change the due date for a to-do item in their list. 
 
 # REFLECTIONS
 # -------------------------------------------------------
 1. How long did you spend working on this project?
+I spent a long time working on this however that was partially because I was swamped with other work to complete. I struggled to understand how the modules and functions/commands would handle the various variables that were created in different files.
 2. What was the most rewarding challenge you conquered?
+Being able to read through Gem files and implement the ruby gem into my own code. It illustrated that I was able to read through code and through instruction make my own code much more powerful
 3. What two additional features did you build? Why?
+I integrated the gem Terminal table in order to produce a prettier output in the command line. I also added the feature for the user to change the due date for an item in their todo list
 4. Where do you still have room to grow?
+I still need to get better at writing code from scratch without looking for code references. I want to become more confident that I know how to set up a certain structure before seeking out code references that confirm how to implement a certain structure. I also need to get better and remembering where I left off with a piece of code. I know that this would be remedied with more commenting in my code along with pushing more updates to my Github rather than coding in one big swoop. 
