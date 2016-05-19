@@ -1,27 +1,36 @@
 class TodoItem
   include Listable
+  include Typeable
   attr_reader :description, :due, :priority
 
   def initialize(description, options={})
     @description = description
-    @due = options[:due] ? Date.parse(options[:due]) : options[:due]
+    @due = options[:due] ? Chronic.parse(options[:due]) : options[:due]
     @priority = options[:priority]
   end
   
+  def priority_order
+    case priority
+    when "high"
+      1
+    when "medium"
+      2
+    when "low"
+      3
+    else
+      4
+    end
+  end 
 
-  def format_date
-    @due ? @due.strftime("%D") : "No due date"
-  end
-  def format_priority
-    value = " ⇧" if @priority == "high"
-    value = " ⇨" if @priority == "medium"
-    value = " ⇩" if @priority == "low"
-    value = "" if !@priority
-    return value
-  end
+
   def details
+    format_type +
     format_description(@description) + "due: " +
-    format_date +
+    format_date(@due) +
     format_priority
+  end
+
+  def change_due_date(due_date)
+    @due = Chronic.parse(due_date)
   end
 end
