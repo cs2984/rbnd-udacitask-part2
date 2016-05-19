@@ -49,6 +49,7 @@ new_list.add("link", "http://ruby-doc.org")
 # ------------------------
   new_list.filter("event")
 
+########NEW FEATURES############
 #DEMO TERMINAL TABLE
   puts "Feature One: Terminal Table Formatted List"
   new_list.pretty_list
@@ -56,11 +57,11 @@ new_list.add("link", "http://ruby-doc.org")
 #DEMO CHANGE DATE
 puts "Feature Two: Change due date of a todo"
 
-list = UdaciList.new(title: "ToDo List")
-list.add("todo", "Goto civilwar film", due: Chronic.parse('4th friday in may').to_s, priority: "low")
-list.add("todo", "Mindfullnes meditation", due: Chronic.parse('in 3 hours').to_s)
-list.add("todo", "Finish ruby course", due: Chronic.parse('2 days from now').to_s, priority: "high")
-list.all
+list = UdaciList.new(title: "Carries List")
+list.add("todo", "Laundry", due: Chronic.parse('This Friday').to_s, priority: "low")
+list.add("todo", "Soulcycle", due: Chronic.parse('in 3 hours').to_s)
+list.add("todo", "Commencement Ceremony from NYU", due: Chronic.parse('2 days from now').to_s, priority: "high")
+list.pretty_list
 
 puts
 puts "Change item 3's due date to tomorrow"
