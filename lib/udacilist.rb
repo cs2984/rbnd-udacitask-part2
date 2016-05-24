@@ -62,6 +62,16 @@ class UdaciList
       end
     end
   end
+
+   def filter_by_due_date
+    todo_items = @items.select {|item| item.type == "todo" && !item.due_date.nil?}
+    todo_items_without_due_date = @items.select {|item| item.type == "todo" && item.due_date.nil?}
+    items_with_due_date = todo_items.sort_by { |item| item.due_date.to_s}
+    items_by_due_date = items_with_due_date + todo_items_without_due_date
+    items_by_due_date.each do |item|
+      puts "#{item.details}"
+    end
+  end 
   
   def display_header
     puts "-" * @title.length
@@ -81,7 +91,11 @@ class UdaciList
   end
 
   def change_due_date(index, due_date)
-    @items[index-1].change_due_date(due_date) if @items[index-1].type == 'todo'
+    if @items[index-1].type == 'todo'
+      @items[index-1].change_due_date(due_date) 
+    else 
+      raise UdaciListErrors::InvalidChangeDueDateType
+    end
   end
 end
 

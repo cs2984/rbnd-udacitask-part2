@@ -6,4 +6,6 @@ module UdaciListErrors
     end
     class InvalidPriorityValue < StandardError
     end
+    class InvalidChangeDueDateType < StandardError
+    end
 end

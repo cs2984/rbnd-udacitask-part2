@@ -54,8 +54,13 @@ new_list.add("link", "http://ruby-doc.org")
   puts "Feature One: Terminal Table Formatted List"
   new_list.pretty_list
 
+#DEMO FILTER BY DUE DATE
+puts "Feature Two: Filter by Due Date"
+new_list.filter_by_due_date
+
+
 #DEMO CHANGE DATE
-puts "Feature Two: Change due date of a todo"
+puts "Feature Three: Change due date of a todo"
 
 list = UdaciList.new(title: "Carries List")
 list.add("todo", "Laundry", due: Chronic.parse('This Friday').to_s, priority: "low")
